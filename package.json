@@ -1,0 +1,23 @@
+{
+  "name": "Linked Basic functionality",
+  "version": "1.0.0",
+  "description": "Job portal",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index --prefix backend",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "author": "Eswar Abisheak",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.15"
+  }
+}
